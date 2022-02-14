@@ -3,7 +3,11 @@
 
     $paragrafoLength = strlen($paragrafo);
 
+    $parolaNascosta = $_GET["hide"];
 
+    $paragrafoCensurato = str_replace($parolaNascosta, "***", $paragrafo);
+
+    $paragrafoCensuratoLength = strlen($paragrafoCensurato);
 ?>
 
 <!DOCTYPE html>
@@ -23,6 +27,15 @@
         <h3>Lunghezza discorso Re Theoden</h3>
 
         <p><?php echo $paragrafoLength ?> caratteri</p>
+        
+        <h3>Discorso Re Theoden con parola censurata</h3>
+
+        <p><?php echo $paragrafoCensurato ?></p>
+
+        <h3>Lunghezza discorso Re Theoden con parola censurata</h3>
+
+        <p><?php echo $paragrafoCensuratoLength ?> caratteri</p>
+
     </div>
 
     <!--
