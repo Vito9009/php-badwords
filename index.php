@@ -5,7 +5,7 @@
 
     $parolaNascosta = $_GET["hide"];
 
-    $paragrafoCensurato = str_replace($parolaNascosta, "***", $paragrafo);
+    $paragrafoCensurato = str_ireplace($parolaNascosta, "***", $paragrafo); //str_ireplace (al posto di str_replace) per ignorare caratteri maiuscoli/minuscoli
 
     $paragrafoCensuratoLength = strlen($paragrafoCensurato);
 ?>
